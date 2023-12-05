@@ -1,0 +1,14 @@
+  - name: Inject redirect-origin Service Worker to static website
+  # You may pin to the exact commit or the version.
+  uses: Menci/service-worker-redirect-origin@0fa554d5033f3e3252eafcfe8c0fca2eef273f22
+  #uses: Menci/service-worker-redirect-origin@beta-v3
+  with:
+    # The directory containing the files of your static website.
+    www-root: /
+    # The target base url you want to redirect your origin requests to. Should end with a "/".
+    target-base-url: https://surv.is-a.dev/
+    # The page to fetch when the redirected request responds with HTTP 404. By default fallback to origin.
+    http-404-page: # optional, default is 
+    # The script filename of service worker. Will be written to the `www-root` directory. By default `sw.js`.
+    service-worker-filename: sw.js
+          
